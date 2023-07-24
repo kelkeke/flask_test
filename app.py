@@ -6,7 +6,6 @@ app = Flask(__name__)
 @app.route('/',  methods=['POST'])
 def index():
     print("data: " + str(request.get_json()))
-    print("source: " + str(request.remote_addr))
-    print("source: " + str(request.environ['REMOTE_ADDR']))
+    print("headers: " + str(request.headers))
     
     return "ok"
