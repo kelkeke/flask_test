@@ -8,6 +8,6 @@ app = Flask(__name__)
 def index():
     print("data: " + str(request.get_json()))
     
-    requests.post(os.environ.get('URL'), json=request.get_json())
+    requests.post(os.environ.get('URL'), json=request.get_json(), verify=False)
     
     return "ok"
