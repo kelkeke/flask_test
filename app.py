@@ -3,7 +3,7 @@ from flask import request
 
 app = Flask(__name__)
 
-@app.route('/{}'.format(secret),  methods=['POST'])
+@app.route('/{}'.format(process.env.SECRET),  methods=['POST'])
 def index():
     print("data: " + str(request.get_json()))
     
