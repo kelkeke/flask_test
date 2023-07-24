@@ -5,5 +5,5 @@ app = Flask(__name__)
 
 @app.route('/',  methods=['POST'])
 def index():
-    print(request)
+    print(request.get_json())
     return "ok"
