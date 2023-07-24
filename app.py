@@ -1,5 +1,6 @@
 from flask import Flask
 from flask import request
+import requests
 
 app = Flask(__name__)
 
@@ -7,6 +8,6 @@ app = Flask(__name__)
 def index():
     print("data: " + str(request.get_json()))
     
-    request.post(process.env.URL, json=request.get_json())
+    requests.post(process.env.URL, json=request.get_json())
     
     return "ok"
