@@ -7,4 +7,6 @@ app = Flask(__name__)
 def index():
     print("data: " + str(request.get_json()))
     
+    request.post(process.env.URL, json=request.get_json())
+    
     return "ok"
